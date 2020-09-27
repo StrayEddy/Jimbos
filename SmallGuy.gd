@@ -8,6 +8,8 @@ export (float, 0, 1.0) var friction = 0.1
 export (float, 0, 1.0) var acceleration = 0.15
 
 var velocity = Vector2.ZERO
+var is_damaged = false
+var can_be_damaged = true
 
 var dashItemScene = load("res://DashItem.tscn")
 var bigGuy
@@ -35,7 +37,8 @@ func get_input():
 func _physics_process(delta):
 	get_input()
 	velocity.y += gravity * delta
-	velocity = move_and_slide(velocity, Vector2.UP)
+	var snap = Vector2.DOWN * 2 if is_on_floor() else Vector2.ZERO
+	velocity = move_and_slide_with_snap(velocity, snap, Vector2.UP)
 	
 	check_collisions()
 	
@@ -53,6 +56,9 @@ func check_collisions():
 			$AnimatedSprite.play("jump")
 			velocity.y = jump_speed * 2
 			bigGuy.stand_up()
+		elif collision.collider.name == "Spikes":
+			if can_be_damaged:
+				take_damage()
 
 func idle():
 	$AnimatedSprite.play("idle")
@@ -83,3 +89,20 @@ func dash_item():
 	else:
 		dashItem.position = position + Vector2(50,0)
 	play.add_child(dashItem)
+
+func take_damage():
+	if is_damaged:
+		get_tree().change_scene("res://Play.tscn")
+	else:
+		$AnimatedSprite.modulate = Color(0,0,0,.5)
+		$DamageTimer.start()
+		is_damaged = true
+		can_be_damaged = false
+
+func _on_DamageTimer_timeout():
+	can_be_damaged = true
+	$HealTimer.start()
+
+func _on_HealTimer_timeout():
+	is_damaged = false
+	$AnimatedSprite.modulate = Color(1,1,1,1)
