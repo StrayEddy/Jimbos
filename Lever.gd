@@ -1,5 +1,7 @@
 extends Area2D
 
+signal activate
+
 var camera
 
 # Called when the node enters the scene tree for the first time.
@@ -12,5 +14,6 @@ func _on_Lever_body_entered(body):
 			activate()
 
 func activate():
+	emit_signal("activate")
 	$AnimatedSprite.play("activate")
 	camera.big_shake()
