@@ -14,10 +14,12 @@ var can_be_damaged = true
 var dashItemScene = load("res://DashItem.tscn")
 var bigGuy
 var play
+var camera
 
 func _ready():
 	bigGuy = get_tree().get_nodes_in_group("BigGuy")[0]
 	play = get_tree().get_nodes_in_group("Play")[0]
+	camera = get_tree().get_nodes_in_group("Camera")[0]
 
 func get_input():
 	var dir = 0
@@ -59,6 +61,7 @@ func check_collisions():
 		elif collision.collider.name == "Spikes":
 			if can_be_damaged:
 				take_damage()
+				camera.shake()
 
 func idle():
 	$AnimatedSprite.play("idle")

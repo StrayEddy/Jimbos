@@ -14,9 +14,11 @@ var is_damaged = false
 var can_be_damaged = true
 
 var smallGuy
+var camera
 
 func _ready():
 	smallGuy = get_tree().get_nodes_in_group("SmallGuy")[0]
+	camera = get_tree().get_nodes_in_group("Camera")[0]
 
 func get_movement_input():
 	var dir = 0
@@ -58,6 +60,7 @@ func check_collisions():
 		if collision.collider.name == "Spikes":
 			if can_be_damaged:
 				take_damage()
+				camera.shake()
 
 func idle():
 	$AnimatedSprite.play("idle")
