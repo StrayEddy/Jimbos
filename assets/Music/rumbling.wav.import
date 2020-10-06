@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rumbling.wav-40511e7f2f727090c3fae41b2d2c4006.sample"
+
+[deps]
+
+source_file="res://assets/Music/rumbling.wav"
+dest_files=[ "res://.import/rumbling.wav-40511e7f2f727090c3fae41b2d2c4006.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

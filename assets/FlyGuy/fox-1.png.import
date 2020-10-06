@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle.png-288f55a92a2ae005acf426290e950cef.stex"
+path="res://.import/fox-1.png-86360d882846085f88b2a1172943cf2c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FlyGuy/idle.png"
-dest_files=[ "res://.import/idle.png-288f55a92a2ae005acf426290e950cef.stex" ]
+source_file="res://assets/FlyGuy/fox-1.png"
+dest_files=[ "res://.import/fox-1.png-86360d882846085f88b2a1172943cf2c.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

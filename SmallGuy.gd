@@ -61,7 +61,6 @@ func check_collisions():
 		elif collision.collider.name == "Spikes":
 			if can_be_damaged:
 				take_damage()
-				camera.shake()
 
 func idle():
 	$AnimatedSprite.play("idle")
@@ -72,12 +71,14 @@ func walk():
 func jump():
 	$AnimatedSprite.play("jump")
 	velocity.y = jump_speed
+	$AudioJump.play(0.05)
 
 func fall():
 	$AnimatedSprite.play("fall")
 
 func dash():
 	$AnimatedSprite.play("dash")
+	$AudioDash.play()
 	$DashTimer.start()
 	if $AnimatedSprite.flip_h:
 		velocity.x = -dash_speed
@@ -101,6 +102,7 @@ func take_damage():
 		$DamageTimer.start()
 		is_damaged = true
 		can_be_damaged = false
+		camera.shake()
 
 func _on_DamageTimer_timeout():
 	can_be_damaged = true

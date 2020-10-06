@@ -18,11 +18,15 @@ func _process(delta):
 	
 	if not $ShakeTimer.is_stopped():
 		set_offset(Vector2(rand_range(-5.0, 5.0), rand_range(-5.0, 5.0)))
+	elif $AudioRumbling.playing:
+		$AudioRumbling.stop()
 
 func shake():
 	shake_intensity = 5.0
 	$ShakeTimer.start(.5)
+	$AudioRumbling.play()
 
 func big_shake():
 	shake_intensity = 2.0
 	$ShakeTimer.start(2)
+	$AudioRumbling.play()

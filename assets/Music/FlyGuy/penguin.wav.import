@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/penguin.wav-0882fcf28bdd565e220dce9014877638.sample"
+
+[deps]
+
+source_file="res://assets/Music/FlyGuy/penguin.wav"
+dest_files=[ "res://.import/penguin.wav-0882fcf28bdd565e220dce9014877638.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

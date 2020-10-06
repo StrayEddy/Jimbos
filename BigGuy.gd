@@ -71,6 +71,7 @@ func walk():
 func jump():
 	$AnimatedSprite.play("jump")
 	velocity.y = jump_speed
+	$AudioJump.play()
 
 func fall():
 	$AnimatedSprite.play("fall")
@@ -94,6 +95,7 @@ func stand_up():
 	is_lying_down = false
 
 func dash():
+	$AudioDash.play()
 	if $AnimatedSprite.flip_h:
 		velocity.x = -dash_speed
 	else:
@@ -112,6 +114,7 @@ func take_damage():
 		$DamageTimer.start()
 		is_damaged = true
 		can_be_damaged = false
+		camera.shake()
 
 func _on_DamageTimer_timeout():
 	can_be_damaged = true

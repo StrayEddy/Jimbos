@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
+[ext_resource path="res://assets/Music/jump.wav" type="AudioStream" id=1]
 [ext_resource path="res://SmallGuy.gd" type="Script" id=2]
+[ext_resource path="res://assets/Music/dash.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/SmallGuy/idle.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -64,5 +66,12 @@ one_shot = true
 [node name="HealTimer" type="Timer" parent="."]
 wait_time = 15.0
 one_shot = true
+
+[node name="AudioJump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+volume_db = -10.0
+
+[node name="AudioDash" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
 [connection signal="timeout" from="DamageTimer" to="." method="_on_DamageTimer_timeout"]
 [connection signal="timeout" from="HealTimer" to="." method="_on_HealTimer_timeout"]

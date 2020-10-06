@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Play.gd" type="Script" id=1]
 [ext_resource path="res://FlyGuy.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://SmallGuy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://BigGuy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Camera.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/Music/level1.ogg" type="AudioStream" id=7]
 
 [node name="Play" type="Node2D" groups=[
 "Play",
@@ -27,4 +28,9 @@ scale = Vector2( 2, 2 )
 
 [node name="FlyGuy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 208, 512 )
-scale = Vector2( 2, 2 )
+scale = Vector2( 5, 5 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -25.0
+autoplay = true

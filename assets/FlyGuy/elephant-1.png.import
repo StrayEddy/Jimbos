@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/special_move.png-b1f8f8c8c54fca7524e5dc5edc5ea0d3.stex"
+path="res://.import/elephant-1.png-2f28abdb3f59afd59e67bceb1c7fe2a4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/FlyGuy/special_move.png"
-dest_files=[ "res://.import/special_move.png-b1f8f8c8c54fca7524e5dc5edc5ea0d3.stex" ]
+source_file="res://assets/FlyGuy/elephant-1.png"
+dest_files=[ "res://.import/elephant-1.png-2f28abdb3f59afd59e67bceb1c7fe2a4.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

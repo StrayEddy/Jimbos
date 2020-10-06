@@ -1,29 +1,142 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=53 format=2]
 
-[ext_resource path="res://assets/FlyGuy/special_move.png" type="Texture" id=1]
+[ext_resource path="res://assets/FlyGuy/cow-1.png" type="Texture" id=1]
 [ext_resource path="res://FlyGuy.gd" type="Script" id=2]
 [ext_resource path="res://assets/light.png" type="Texture" id=3]
-[ext_resource path="res://assets/FlyGuy/move.png" type="Texture" id=4]
-[ext_resource path="res://assets/FlyGuy/idle.png" type="Texture" id=5]
+[ext_resource path="res://assets/FlyGuy/cow-2.png" type="Texture" id=4]
+[ext_resource path="res://assets/FlyGuy/fox-1.png" type="Texture" id=5]
+[ext_resource path="res://assets/FlyGuy/cat-1.png" type="Texture" id=6]
+[ext_resource path="res://assets/FlyGuy/cat-2.png" type="Texture" id=7]
+[ext_resource path="res://assets/FlyGuy/crocodile-1.png" type="Texture" id=8]
+[ext_resource path="res://assets/FlyGuy/crocodile-2.png" type="Texture" id=9]
+[ext_resource path="res://assets/FlyGuy/dog-2.png" type="Texture" id=10]
+[ext_resource path="res://assets/FlyGuy/dog-1.png" type="Texture" id=11]
+[ext_resource path="res://assets/FlyGuy/horse-2.png" type="Texture" id=12]
+[ext_resource path="res://assets/FlyGuy/horse-1.png" type="Texture" id=13]
+[ext_resource path="res://assets/FlyGuy/monkey-1.png" type="Texture" id=14]
+[ext_resource path="res://assets/FlyGuy/panda-2.png" type="Texture" id=15]
+[ext_resource path="res://assets/FlyGuy/panda-1.png" type="Texture" id=16]
+[ext_resource path="res://assets/FlyGuy/fox-2.png" type="Texture" id=17]
+[ext_resource path="res://assets/FlyGuy/turtle-1.png" type="Texture" id=18]
+[ext_resource path="res://assets/FlyGuy/sheep-1.png" type="Texture" id=19]
+[ext_resource path="res://assets/FlyGuy/elephant-1.png" type="Texture" id=20]
+[ext_resource path="res://assets/FlyGuy/elephant-2.png" type="Texture" id=21]
+[ext_resource path="res://assets/FlyGuy/duck-1.png" type="Texture" id=22]
+[ext_resource path="res://assets/FlyGuy/duck-2.png" type="Texture" id=23]
+[ext_resource path="res://assets/FlyGuy/monkey-2.png" type="Texture" id=24]
+[ext_resource path="res://assets/FlyGuy/sheep-2.png" type="Texture" id=25]
+[ext_resource path="res://assets/FlyGuy/snake-1.png" type="Texture" id=26]
+[ext_resource path="res://assets/FlyGuy/penguin-2.png" type="Texture" id=27]
+[ext_resource path="res://assets/FlyGuy/penguin-1.png" type="Texture" id=28]
+[ext_resource path="res://assets/FlyGuy/pig-1.png" type="Texture" id=29]
+[ext_resource path="res://assets/FlyGuy/rabbit-2.png" type="Texture" id=30]
+[ext_resource path="res://assets/FlyGuy/pig-2.png" type="Texture" id=31]
+[ext_resource path="res://assets/FlyGuy/rabbit-1.png" type="Texture" id=32]
+[ext_resource path="res://assets/FlyGuy/snake-2.png" type="Texture" id=33]
+[ext_resource path="res://assets/FlyGuy/turtle-2.png" type="Texture" id=34]
+[ext_resource path="res://assets/Music/FlyGuy/crocodile.wav" type="AudioStream" id=35]
+[ext_resource path="res://assets/Music/FlyGuy/cat.wav" type="AudioStream" id=36]
+[ext_resource path="res://assets/Music/FlyGuy/sheep.wav" type="AudioStream" id=37]
+[ext_resource path="res://assets/Music/FlyGuy/monkey.wav" type="AudioStream" id=38]
+[ext_resource path="res://assets/Music/FlyGuy/cow.wav" type="AudioStream" id=39]
+[ext_resource path="res://assets/Music/FlyGuy/elephant.wav" type="AudioStream" id=40]
+[ext_resource path="res://assets/Music/FlyGuy/panda.wav" type="AudioStream" id=41]
+[ext_resource path="res://assets/Music/FlyGuy/fox.wav" type="AudioStream" id=42]
+[ext_resource path="res://assets/Music/FlyGuy/duck.wav" type="AudioStream" id=43]
+[ext_resource path="res://assets/Music/FlyGuy/horse.wav" type="AudioStream" id=44]
+[ext_resource path="res://assets/Music/FlyGuy/dog.wav" type="AudioStream" id=45]
+[ext_resource path="res://assets/Music/FlyGuy/rabbit.wav" type="AudioStream" id=46]
+[ext_resource path="res://assets/Music/FlyGuy/snake.wav" type="AudioStream" id=47]
+[ext_resource path="res://assets/Music/FlyGuy/penguin.wav" type="AudioStream" id=48]
+[ext_resource path="res://assets/Music/FlyGuy/pig.wav" type="AudioStream" id=49]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 13.1212
 
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0.284768, 0.582781, 0.860927, 1 )
+colors = PoolColorArray( 0.2, 0.172549, 0.313726, 1, 0.27451, 0.529412, 0.560784, 1, 0.580392, 0.890196, 0.266667, 1, 0.886275, 0.952941, 0.894118, 1 )
+
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 5 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "idle",
+"name": "horse",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "move",
+"name": "dog",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ) ],
-"loop": false,
-"name": "special_move",
+"frames": [ ExtResource( 29 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "pig",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "fox",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "turtle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "snake",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "crocodile",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "penguin",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "panda",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "elephant",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "rabbit",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "cow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "cat",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "monkey",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "duck",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "sheep",
 "speed": 5.0
 } ]
 
@@ -38,10 +151,76 @@ script = ExtResource( 2 )
 shape = SubResource( 1 )
 disabled = true
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 50
+emission_shape = 1
+emission_sphere_radius = 10.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 50.0
+tangential_accel_random = 1.0
+scale_amount = 5.0
+color_ramp = SubResource( 3 )
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "idle"
+animation = "dog"
+frame = 1
+playing = true
 
 [node name="Light2D" type="Light2D" parent="."]
 texture = ExtResource( 3 )
 texture_scale = 0.5
+
+[node name="cat" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 36 )
+
+[node name="cow" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 39 )
+
+[node name="crocodile" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 35 )
+
+[node name="dog" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 45 )
+
+[node name="duck" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 43 )
+
+[node name="elephant" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 40 )
+
+[node name="fox" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 42 )
+
+[node name="horse" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 44 )
+
+[node name="monkey" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 38 )
+
+[node name="panda" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 41 )
+
+[node name="penguin" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 48 )
+
+[node name="pig" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 49 )
+
+[node name="rabbit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 46 )
+
+[node name="sheep" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 37 )
+
+[node name="snake" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 47 )
+
+[node name="TalkTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="ShakeTimer" type="Timer" parent="."]
+one_shot = true
+[connection signal="timeout" from="TalkTimer" to="." method="_on_TalkTimer_timeout"]
