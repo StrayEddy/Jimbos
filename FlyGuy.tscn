@@ -59,19 +59,9 @@ colors = PoolColorArray( 0.2, 0.172549, 0.313726, 1, 0.27451, 0.529412, 0.560784
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "dog",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "crocodile",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 19 ), ExtResource( 25 ) ],
-"loop": true,
-"name": "sheep",
+"name": "horse",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 26 ), ExtResource( 33 ) ],
@@ -79,14 +69,19 @@ animations = [ {
 "name": "snake",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 19 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "sheep",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 16 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "panda",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 20 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 17 ) ],
 "loop": true,
-"name": "elephant",
+"name": "fox",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 22 ), ExtResource( 23 ) ],
@@ -94,14 +89,9 @@ animations = [ {
 "name": "duck",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "monkey",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 32 ), ExtResource( 30 ) ],
-"loop": true,
-"name": "rabbit",
+"name": "cat",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 34 ) ],
@@ -109,24 +99,24 @@ animations = [ {
 "name": "turtle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 28 ), ExtResource( 27 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "penguin",
+"name": "crocodile",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
-"name": "cat",
+"name": "elephant",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 24 ) ],
 "loop": true,
-"name": "cow",
+"name": "monkey",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "horse",
+"name": "dog",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 29 ), ExtResource( 31 ) ],
@@ -134,9 +124,19 @@ animations = [ {
 "name": "pig",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 5 ), ExtResource( 17 ) ],
+"frames": [ ExtResource( 28 ), ExtResource( 27 ) ],
 "loop": true,
-"name": "fox",
+"name": "penguin",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "rabbit",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "cow",
 "speed": 5.0
 } ]
 
