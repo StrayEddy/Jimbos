@@ -6,7 +6,6 @@ export (float, 0, 1.0) var friction = 0.1
 export (float, 0, 1.0) var acceleration = 0.25
 
 var velocity = Vector2.ZERO
-var play
 var camera
 var old_camera_pos
 
@@ -15,7 +14,6 @@ var animals = ["cat", "cow", "crocodile", "dog", "duck", "elephant", "fox", "hor
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	play = get_tree().get_nodes_in_group("Play")[0]
 	camera = get_tree().get_nodes_in_group("Camera")[0]
 	$Light2D.color = Color.white
 	old_camera_pos = camera.position
@@ -95,4 +93,4 @@ func talk():
 
 func _on_TalkTimer_timeout():
 	talk()
-	$TalkTimer.start(15 + randi() % 15)
+	$TalkTimer.start(3 + randi() % 3)

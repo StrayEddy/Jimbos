@@ -15,4 +15,4 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
 	elif event.is_action_pressed("ui_accept"):
-		get_tree().change_scene("res://Play.tscn")
+		get_tree().change_scene("res://Level1-2.tscn")

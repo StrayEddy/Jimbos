@@ -61,6 +61,12 @@ func check_collisions():
 			if can_be_damaged:
 				take_damage()
 				camera.shake()
+		elif collision.collider.name == "AlternativeSpikes":
+			if can_be_damaged:
+				take_damage()
+				camera.shake()
+		elif collision.collider.name == "Die":
+			die()
 
 func idle():
 	$AnimatedSprite.play("idle")
@@ -108,13 +114,16 @@ func _on_AnimatedSprite_animation_finished():
 
 func take_damage():
 	if is_damaged:
-		get_tree().change_scene("res://Play.tscn")
+		die()
 	else:
 		$AnimatedSprite.modulate = Color(0,0,0,.5)
 		$DamageTimer.start()
 		is_damaged = true
 		can_be_damaged = false
 		camera.shake()
+
+func die():
+	get_tree().change_scene("res://Menu.tscn")
 
 func _on_DamageTimer_timeout():
 	can_be_damaged = true

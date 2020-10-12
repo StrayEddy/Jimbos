@@ -13,12 +13,10 @@ var can_be_damaged = true
 
 var dashItemScene = load("res://DashItem.tscn")
 var bigGuy
-var play
 var camera
 
 func _ready():
 	bigGuy = get_tree().get_nodes_in_group("BigGuy")[0]
-	play = get_tree().get_nodes_in_group("Play")[0]
 	camera = get_tree().get_nodes_in_group("Camera")[0]
 
 func get_input():
@@ -61,6 +59,8 @@ func check_collisions():
 		elif collision.collider.name == "Spikes":
 			if can_be_damaged:
 				take_damage()
+		elif collision.collider.name == "Die":
+			die()
 
 func idle():
 	$AnimatedSprite.play("idle")
@@ -92,17 +92,20 @@ func dash_item():
 		dashItem.position = position - Vector2(50,0)
 	else:
 		dashItem.position = position + Vector2(50,0)
-	play.add_child(dashItem)
+	get_parent().add_child(dashItem)
 
 func take_damage():
 	if is_damaged:
-		get_tree().change_scene("res://Play.tscn")
+		die()
 	else:
 		$AnimatedSprite.modulate = Color(0,0,0,.5)
 		$DamageTimer.start()
 		is_damaged = true
 		can_be_damaged = false
 		camera.shake()
+
+func die():
+	get_tree().change_scene("res://Menu.tscn")
 
 func _on_DamageTimer_timeout():
 	can_be_damaged = true
